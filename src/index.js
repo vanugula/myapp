@@ -25,7 +25,7 @@ const formikEnhancer = withFormik({
     ...user,
   }),
   handleSubmit: (payload, { setSubmitting }) => {
-    alert(payload.email);
+    alert(payload.firstName);
     setSubmitting(false);
   },
   displayName: 'MyForm',
@@ -157,22 +157,10 @@ const MyEnhancedForm = formikEnhancer(MyForm);
 
 const App = () => (
   <div className="app">
-    <h1>
-      Building input primitives with{' '}
-      <a href="https://github.com/jaredpalmer/formik">
-        Formik
-      </a>
-    </h1>
     <p>
       Formik's enables you to quickly build and style your
       own reusable form-related components extremely
       quickly.
-    </p>
-    <p>
-      This example does just that. It demonstrates a custom
-      text input, label, and form feedback components as
-      well as a cool shake animation that's triggered if a
-      field is invalid.
     </p>
 
     <MyEnhancedForm
